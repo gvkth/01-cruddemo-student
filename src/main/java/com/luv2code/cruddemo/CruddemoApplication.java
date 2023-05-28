@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.util.List;
+import java.util.ListIterator;
 
 @SpringBootApplication
 public class CruddemoApplication {
@@ -35,6 +36,13 @@ public class CruddemoApplication {
 		for(Student tempStudent: theStudents){
 			System.out.println(tempStudent);
 		}
+
+		/*ListIterator<Student> a = theStudents.listIterator();
+		while (a.hasNext()){
+			Student s = a.next();
+			System.out.println(s.toString());
+		}*/
+
 	}
 
 	private void readStudent(StudentDAO studentDAO) {
